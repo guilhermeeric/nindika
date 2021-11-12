@@ -7,53 +7,27 @@
 
 ## Development
 ### System dependencies
-**Ruby:** 3.0.2
-
-**PostgreSQL:** 13
-
-**Node.js:** >15
+**Docker**
 
 ## Getting Started
 1. Clone project
 
-        $ git@github.com:stephannv/nindika.git
+        $ git@github.com:guilhermeeric/nindika.git
 
 2. Change directory to `nindika`
 
         $ cd nindika
 
-3. Install project dependencies:
+3. Fill `.env.example` with Nintendo API info. These can be found by looking at requests on Nintendo eShop website:
 
-        $ bundle install
-        $ yarn install
+        nintendo_algolia_application_id: 'XXXXX'
+        nintendo_algolia_api_key: 'XXXXXX
 
-4. Setup database:
+4. Run project with Docker Compose:
 
-        $ rails db:setup
+        $ docker-compose up
 
-
-5. Generate new credentials with Nintendo API info:
-
-        $ rm config/credentials.yml.enc
-        $ rails credentials:edit
-
-    Fill app id and api key:
-      ```
-      nintendo_algolia_application_id: 'XXXXX'
-      nintendo_algolia_api_key: 'XXXXXX
-      ```
-
-
-6. Import data
-
-        $ rake admin:import_data
-
-
-7. Run project
-
-        $ rails s -p 3000
-
-8. Visit [http://localhost:3000](http://localhost:3000)
+5. Visit [http://localhost:3000](http://localhost:3000)
 
 ## Run tests
 
