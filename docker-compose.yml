@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    environment:
+      - EDITOR=vim
+    volumes:
+      - .:/app/
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+
+  db:
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_DB=nindika_development
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5342
+
+volumes:
+  postgres:
+    
