@@ -24,6 +24,7 @@ pt-BR:
       genres: Gêneros
       languages: Idiomas disponíveis
       price_history: Histórico de Preços
+      unavailable_purchase: Compra indisponível
 
     list:
       result_count:
